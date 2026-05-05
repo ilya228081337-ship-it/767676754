@@ -20,7 +20,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["worker.min.js"],
+      "resources": ["worker.min.js", "tesseract-core.wasm.js", "lang/*.traineddata", "lang/*.traineddata.gz"],
       "matches": ["<all_urls>"]
     }
   ],

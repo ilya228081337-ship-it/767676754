@@ -92,7 +92,8 @@ processBtn.addEventListener('click', async () => {
   try {
     worker = await Tesseract.createWorker('eng', 1, {
       workerPath: chrome.runtime.getURL('worker.min.js'),
-      corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@4/tesseract-core.wasm.js',
+      corePath: chrome.runtime.getURL('tesseract-core.wasm.js'),
+      langPath: chrome.runtime.getURL('lang'),
       workerBlobURL: false,
       logger: (m) => {
         if (m.status === 'recognizing text') {
